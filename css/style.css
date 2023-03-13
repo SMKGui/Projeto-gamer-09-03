@@ -1,14 +1,18 @@
 /* Imports da fonte */
-
+@font-face{
+    font-family: Inter;
+    src: url(../assets/fonts/static/Inter-Medium.ttf);
+}
 /* Reset CSS */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Classes genericas */
-.layout-grid{
+.layout-grid {
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -16,32 +20,79 @@
 }
 
 /* justify content + align items */
-.alinhamento-between-center{
+.alinhamento-between-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-body{
+body {
     color: white;
 }
+
 /* Mobile first */
 
 /* HEADER */
-header{
+header {
     height: 60px;
     background-color: #1b1426;
 }
 
-header .header-top{
-display: none;
+header .header-top {
+    display: none;
 }
 
-header nav{
-display: none;
+header .header-bottom {
+    height: 60px;
 }
 
-header .menu-usuarios{
-display: none;
+header .logo {
+    width: 86px;
 }
 
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    height: calc(100vh - 60px);
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+header .header-bottom nav > a{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #f9aa01;
+    padding: 30px 0;
+    font-size: 15px;
+    color: white;
+    font-family: Inter;
+    text-decoration: none;
+    justify-content: center;    
+}
+
+header .header-bottom nav a:last-of-type{
+    border-bottom: none;
+}
+
+header .header-bottom nav .midias-sociais{
+    /* border: 1px solid salmon; */
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+header .menu-usuarios {
+    display: none;
+}
