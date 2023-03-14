@@ -40,13 +40,13 @@
         <div class="header-bottom">
             <div class="layout-grid alinhamento-between-center">
                 <!-- Menu Hamburger. Visivel apenas no smartphone -->
-                <img src="assets/icons/Vectorhamburger.svg"
+                <img onclick="mostrarMenu()" src="assets/icons/Vectorhamburger.svg"
                     alt="Icone de telefone. Abre e fecha o menu principal, no celular">
 
                 <img class="logo" src="assets/images/logotipo-gamerlogotipo maior.svg"
                     alt="Imagem logotipo gamer com controle de video game ao centro">
 
-                <nav class="menu">
+                <nav class="menu" id="menu">
                     <a href="">Inicio</a>
                     <a href="">Jogadores</a>
                     <a href="">Equipes</a>
@@ -76,9 +76,9 @@
                 </nav>
 
                 <!-- menu 3 pontinhos -->
-                <img src="assets/icons/Vector3pontos.svg" alt="Icone 3 pontinhos, abre e fecha o menu de usuarios">
+                <img onclick="menu3pontos()" src="assets/icons/Vector3pontos.svg" alt="Icone 3 pontinhos, abre e fecha o menu de usuarios">
 
-                <div class="menu-usuarios">
+                <div class="menu-usuarios" id="menu-usuarios">
                     <a href="">
                         <img src="assets/icons/Vectorusuario.svg" alt="Icone de perfil">
                     </a>
@@ -92,7 +92,18 @@
             </div>
         </div>
     </header>
+    <script>
+        function mostrarMenu() {
+            // pega a nav bar pelo id
+            document.getElementById("menu").classList.toggle("mostrar-menu");
+        }
+    </script>
 
+    <script>
+        function menu3pontos() {
+            document.getElementById("menu-usuarios").classList.toggle("mostraromenu")
+        }
+    </script>
 </body>
 
 </html>

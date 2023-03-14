@@ -19,6 +19,14 @@
     border: 1px solid salmon;
 }
 
+.mostrar-menu{
+    left: 0 !important;
+}
+
+.mostraromenu{
+    right: 0 !important;
+}
+
 /* justify content + align items */
 .alinhamento-between-center {
     display: flex;
@@ -34,7 +42,10 @@ body {
 
 /* HEADER */
 header {
+    position: fixed;
+    width: 100vw;
     height: 60px;
+    z-index: 100;
     background-color: #1b1426;
 }
 
@@ -53,14 +64,16 @@ header .logo {
 header .header-bottom nav {
     position: fixed;
     top: 60px;
-    left: 0;
+    left: -80vw;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
     width: 80vw;
     height: calc(100vh - 60px);
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
-    display: flex;
-    flex-direction: column;
     padding-bottom: 20px;
+    transition: left 0.4s;
 }
 
 header .header-bottom nav > a{
@@ -73,7 +86,7 @@ header .header-bottom nav > a{
     color: white;
     font-family: Inter;
     text-decoration: none;
-    justify-content: center;    
+    justify-content: center;  
 }
 
 header .header-bottom nav a:last-of-type{
@@ -94,5 +107,18 @@ header .header-bottom nav .midias-sociais{
 
 
 header .menu-usuarios {
-    display: none;
+    display: flex;
+    position: fixed;
+    right: -66px;
+    flex-direction: column;
+    top: 60px;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    width: 66px;
+    height: 170px;
+    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: right 0.4s;
+    
 }
