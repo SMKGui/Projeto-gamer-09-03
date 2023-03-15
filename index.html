@@ -40,7 +40,7 @@
         <div class="header-bottom">
             <div class="layout-grid alinhamento-between-center">
                 <!-- Menu Hamburger. Visivel apenas no smartphone -->
-                <img onclick="mostrarMenu()" src="assets/icons/Vectorhamburger.svg"
+                <img class="menu-hamburger" onclick="mostrarMenu()" src="assets/icons/Vectorhamburger.svg"
                     alt="Icone de telefone. Abre e fecha o menu principal, no celular">
 
                 <img class="logo" src="assets/images/logotipo-gamerlogotipo maior.svg"
@@ -76,7 +76,8 @@
                 </nav>
 
                 <!-- menu 3 pontinhos -->
-                <img onclick="menu3pontos()" src="assets/icons/Vector3pontos.svg" alt="Icone 3 pontinhos, abre e fecha o menu de usuarios">
+                <img class="menu-pontinhos" onclick="menu3pontos()" src="assets/icons/Vector3pontos.svg"
+                    alt="Icone 3 pontinhos, abre e fecha o menu de usuarios">
 
                 <div class="menu-usuarios" id="menu-usuarios">
                     <a href="">
@@ -92,6 +93,25 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <article class="banner">
+            <h1>Liga Gamers</h1>
+            <a href="" class="btn-sobre">Sobre</a>
+        </article>
+
+        <section class="jogos">
+            <div class="layout-grid jogos-flex">
+                <img src="assets/images/Group 3fifa23 (1).png" alt="Imagem do jogo Fifa 23">
+                <img src="assets/images/Group 4csgo.png" alt="Imagem do jogo Counter Strike">
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
     <script>
         function mostrarMenu() {
             // pega a nav bar pelo id
