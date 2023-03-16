@@ -1,16 +1,16 @@
-/* Imports da fonte */
+/* Imports de fonts */
 @font-face {
     font-family: Inter;
-    src: url(../assets/fonts/static/Inter-Medium.ttf);
+    src: url(../assets/fonts/static/Inter-Regular.ttf);
 }
 
 @font-face {
-    font-family: TitiliumWebBlack;
+    font-family: TitilliumWeb-Black;
     src: url(../assets/fonts/TitilliumWeb-Black.ttf);
 }
 
 @font-face {
-    font-family: TitiliumWebBold;
+    font-family: TitilliumWeb-Bold;
     src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
 }
 
@@ -22,19 +22,19 @@
     box-sizing: border-box;
 }
 
-/* Classes genericas */
+/* Classes Genéricas */
 .layout-grid {
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 
 .mostrar-menu {
     left: 0 !important;
 }
 
-.mostraromenu {
+.mostrar-usuarios {
     right: 0 !important;
 }
 
@@ -45,11 +45,12 @@
     align-items: center;
 }
 
+
 body {
     color: white;
 }
 
-/* Mobile first */
+/* Mobile First */
 
 /* HEADER */
 header {
@@ -59,7 +60,7 @@ header {
     width: 100vw;
     height: 60px;
     z-index: 100;
-    background-color: #1b1426;
+    background-color: #1B1426;
 }
 
 header .header-top {
@@ -74,6 +75,7 @@ header .logo {
     width: 86px;
 }
 
+
 header .header-bottom nav {
     position: fixed;
     top: 60px;
@@ -81,25 +83,28 @@ header .header-bottom nav {
     z-index: 101;
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     width: 80vw;
     height: calc(100vh - 60px);
+    padding-bottom: 20px;
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
-    padding-bottom: 20px;
+
     transition: left 0.4s;
 }
 
+
 header .header-bottom nav>a {
     display: flex;
-    gap: 20px;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #f9aa01;
+    gap: 20px;
     padding: 30px 0;
-    font-size: 15px;
     color: white;
+    font-size: 15px;
     font-family: Inter;
     text-decoration: none;
-    justify-content: center;
+    border-bottom: 2px solid #F9AA01;
 }
 
 header .header-bottom nav a:last-of-type {
@@ -107,40 +112,39 @@ header .header-bottom nav a:last-of-type {
 }
 
 header .header-bottom nav .midias-sociais {
-    /* border: 1px solid salmon; */
     position: absolute;
     bottom: 20px;
     left: 0;
     width: 100%;
+
     display: flex;
     justify-content: center;
+    margin-top: 40px;
     gap: 20px;
 }
 
-
-
 header .menu-usuarios {
-    display: flex;
     position: fixed;
-    right: -66px;
-    flex-direction: column;
     top: 60px;
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    width: 66px;
+    right: -20vw;
+    width: 20vw;
     height: 170px;
-    padding: 15px 0;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
     transition: right 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-/* Main */
+
+/* MAIN */
 
 main {
-    background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1img\ banner.png);
-    width: 375px;
-    height: 606px;
     margin-top: 60px;
 }
 
@@ -162,31 +166,31 @@ main .banner {
 }
 
 main .banner h1 {
-    font-family: TitiliumWebBlack;
+    font-family: TitilliumWeb-Black;
     font-size: 40px;
-    text-shadow: 0 0 7px #fd4255;
+    text-shadow: 0 0 7px #FD4255;
 }
 
 main .banner a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 171px;
+    width: 170px;
     height: 40px;
-    font-family: TitiliumWebBold;
+    font-family: TitilliumWeb-Bold;
     font-size: 24px;
     color: black;
     text-decoration: none;
-    background-color: #f9aa01;
+    background-color: #F9AA01;
     border-radius: 8px;
 }
 
-/* Sessao jogos */
+/* Sessão Jogos */
 
 main .jogos {
     width: 100%;
     height: 590px;
-    background-color: #1b1426;
+    background-color: #1B1426;
 }
 
 main .jogos .jogos-flex {
@@ -199,7 +203,85 @@ main .jogos .jogos-flex {
 /* Tablets >= 768px */
 @media screen and (min-width: 768px) {}
 
-/* Desktop >= 1200px */
-@media screen and (min-width: 1200px) {}
+/* Desktop >= 1200px*/
+@media screen and (min-width: 1200px) {
+    .layout-grid {
+        width: 100%;
+        max-width: 1200px;
+    }
 
-.layout-grid
+    /* Header */
+    header {
+        height: 140px;
+    }
+
+    header .header-top {
+        display: block;
+        border-bottom: #F9AA01;
+    }
+
+    header .header-top .contatos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 450px;
+        border: 2px solid #FD4255;
+    }
+
+    /* divs .phone, .mail */
+    header .header-top .contatos > div{
+        display: flex;
+        gap: 10px;
+        width: 200px;
+        border-bottom: 2px solid #F9AA01;
+    }
+
+
+    header .header-top .midias-sociais {
+        width: 140px;
+        border: 2px solid #FD4255;
+    }
+
+    /* esconde os elementos desnecessários */
+    header .header-bottom .menu-hamburger,
+    header .header-bottom .menu-pontinhos,
+    header .header-bottom nav .phone,
+    header .header-bottom nav .mail,
+    header .header-bottom nav .midias-sociais {
+        display: none;
+    }
+
+    header .logo {
+        width: 200px;
+    }
+
+    header .header-top {
+        display: flex;
+    }
+
+    header .header-bottom nav {
+        position: static;
+        width: 440px;
+        height: 50px;
+        padding-bottom: 0;
+        flex-direction: row;
+        align-items: center;
+        /* background-color: red; */
+        justify-content: space-between;
+    }
+
+    header .header-bottom nav>a {
+        font-size: 14px;
+        padding: 0;
+        border: none;
+    }
+
+    header .header-bottom .menu-usuarios {
+        position: static;
+        width: 140px;
+        flex-direction: row;
+        height: auto;
+        background-color: transparent;
+        background-image: none;
+    }
+}
