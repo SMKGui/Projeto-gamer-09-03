@@ -213,6 +213,7 @@ main .jogos .jogos-flex {
     /* Header */
     header {
         height: 140px;
+        position: static;
     }
 
     header .header-top {
@@ -225,21 +226,24 @@ main .jogos .jogos-flex {
         justify-content: space-between;
         align-items: center;
         width: 450px;
-        border: 2px solid #FD4255;
+        /* border: 2px solid #FD4255; */
     }
 
     /* divs .phone, .mail */
     header .header-top .contatos > div{
         display: flex;
+        align-items: center;
         gap: 10px;
         width: 200px;
-        border-bottom: 2px solid #F9AA01;
+        /* border-bottom: 2px solid #F9AA01; */
     }
 
 
     header .header-top .midias-sociais {
         width: 140px;
-        border: 2px solid #FD4255;
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid #FD4255; */
     }
 
     /* esconde os elementos desnecessários */
@@ -284,4 +288,86 @@ main .jogos .jogos-flex {
         background-color: transparent;
         background-image: none;
     }
-}
+
+
+    /* main */
+
+    main{
+        margin-top: 0px;
+    }
+
+    main .banner{
+        background-image: url(../assets/images/Banner_background_1banner\ vava.png);
+    }
+    main .jogos .jogos-flex{
+        flex-direction: row;
+        align-items: center;
+    }
+    
+
+    main .jogos-flex img{
+        width: 550px;
+        height: 310px;
+    }
+
+    main .progamer{
+        background-color: #F9AA01;
+        height: 1000px;
+    }
+
+    main .titulo-progamer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        font-size: 40px;
+        font-family: TitilliumWeb-Black;
+        text-align: center;
+    }
+
+    main .titulo-progamer hr{
+        width: 200px;
+        border:2px solid black;
+    }
+    
+    main .progamer article{
+        background-color: aqua;
+        position: relative;
+        width: 520px;
+        height: 690px; 
+    }
+
+    main .progamer article .kiljoy{
+        background-image: url(../assets/images/kiljoykiljoy.png);
+    }
+
+    main .progamer .professores-jogos{
+        display: flex;
+        height: 700px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid magenta;
+    }
+    main .jogos-diferentes{
+        width: 360px;
+        height: 440px;
+        background-color: greenyellow;
+        right: 0px;
+        bottom: 40px;
+        position: absolute;
+    }
+
+    main .professores{
+        width: 360px;
+        height: 440px;
+        background-color: greenyellow;
+        left: 0px;
+        bottom: 40px;
+        position: absolute;
+    }
+
+    .layout-grid{
+        width: 100%;
+        max-width: 1200px;
+    }
+} /* fim da midia querie  */
