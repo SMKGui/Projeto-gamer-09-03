@@ -6,12 +6,17 @@
 
 @font-face {
     font-family: TitilliumWeb-Black;
-    src: url(../assets/fonts/TitilliumWeb-Black.ttf);
+    src: url(../assets/fonts/titillium/TitilliumWeb-Black.ttf);
 }
 
 @font-face {
     font-family: TitilliumWeb-Bold;
-    src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
+    src: url(../assets/fonts/titillium/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-regular;
+    src: url(../assets/fonts/quicksand/Quicksand-Regular.ttf);
 }
 
 /* Reset CSS */
@@ -230,7 +235,7 @@ main .jogos .jogos-flex {
     }
 
     /* divs .phone, .mail */
-    header .header-top .contatos > div{
+    header .header-top .contatos>div {
         display: flex;
         align-items: center;
         gap: 10px;
@@ -292,30 +297,31 @@ main .jogos .jogos-flex {
 
     /* main */
 
-    main{
+    main {
         margin-top: 0px;
     }
 
-    main .banner{
+    main .banner {
         background-image: url(../assets/images/Banner_background_1banner\ vava.png);
     }
-    main .jogos .jogos-flex{
+
+    main .jogos .jogos-flex {
         flex-direction: row;
         align-items: center;
     }
-    
 
-    main .jogos-flex img{
+
+    main .jogos-flex img {
         width: 550px;
         height: 310px;
     }
 
-    main .progamer{
+    main .progamer {
         background-color: #F9AA01;
         height: 1000px;
     }
 
-    main .titulo-progamer{
+    main .titulo-progamer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -325,49 +331,106 @@ main .jogos .jogos-flex {
         text-align: center;
     }
 
-    main .titulo-progamer hr{
+    main .titulo-progamer hr {
         width: 200px;
-        border:2px solid black;
+        border: 2px solid black;
     }
-    
-    main .progamer article{
-        background-color: aqua;
+
+    main .progamer article {
+        /* background-color: aqua; */
         position: relative;
         width: 520px;
-        height: 690px; 
+        height: 690px;
     }
 
-    main .progamer article .kiljoy{
+    main .progamer article.kiljoy {
+        left: 65px;
         background-image: url(../assets/images/kiljoykiljoy.png);
+        background-repeat: no-repeat;
     }
 
-    main .progamer .professores-jogos{
+    main .progamer article.jynx {
+        right: 65px;
+        background-image: url(../assets/images/lp-gamer-home_0000s_0000s_0002_loljynx.png);
+        background-repeat: no-repeat;
+    }
+
+    main .progamer .professores-jogos {
         display: flex;
         height: 700px;
         flex-wrap: wrap;
         justify-content: space-between;
         border: 1px solid magenta;
     }
-    main .jogos-diferentes{
+
+    main .jogos-diferentes {
         width: 360px;
         height: 440px;
-        background-color: greenyellow;
+        background: linear-gradient(145.9deg, rgba(122, 49, 236, 0.2) 0%, rgba(47, 7, 109, 0.83) 98.56%);
+        backdrop-filter: blur(7.5px);
         right: 0px;
         bottom: 40px;
         position: absolute;
     }
 
-    main .professores{
+    main .professores {
         width: 360px;
         height: 440px;
-        background-color: greenyellow;
+        background: linear-gradient(145.9deg, rgba(122, 49, 236, 0.2) 0%, rgba(47, 7, 109, 0.83) 98.56%);
+        backdrop-filter: blur(7.5px);
         left: 0px;
         bottom: 40px;
         position: absolute;
     }
 
-    .layout-grid{
+    main .texto-jogos {
+        color: white;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        font-family: TitilliumWeb-Black;
+        font-size: 25;
+    }
+
+    main .texto-jogos img .joystick {
+        size: 143px;
+    }
+
+    main .texto-jogos p {
+        left: 10px;
+        right: 10px;
+        padding: 0px 10px;
+        text-align: justify;
+        font-family: quicksand-regular;
+        font-size: 16;
+    }
+
+     main .texto-jogos img .jogadores{
+        size: 143px;
+    }
+
+    main .texto-professores {
+        color: white;
+        text-align: center;
+        font-family: TitilliumWeb-Black;
+        font-size: 25;
+    }
+
+    main .texto-professores p {
+        padding: 0px 10px;
+        left: 10px;
+        right: 10px;
+        font-family: quicksand-regular;
+        font-size: 16;
+        text-align: justify;
+    }
+
+    .layout-grid {
         width: 100%;
         max-width: 1200px;
     }
-} /* fim da midia querie  */
+}
+
+/* fim da midia querie  */
